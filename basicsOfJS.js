@@ -129,12 +129,12 @@
 // console.log(answer)
 
 // function nextInLine(arr, item) {
-//     // Only change code below this line
+//     //
 //     arr.push(item);
 //     item = arr.shift()
 
 //     return item;
-//     // Only change code above this line
+//     // above this line
 
 
 // }
@@ -150,7 +150,7 @@
 // var names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
 
 // function golfScore(par, strokes) {
-//     // Only change code below this line
+//     //
 //     if (strokes == 1) {
 //         console.log(
 //             names[0]);
@@ -176,7 +176,7 @@
 
 
 
-//     // Only change code above this line
+//     // above this line
 // }
 // golfScore(1, 2);
 // golfScore(6, 4);
@@ -187,7 +187,7 @@
 
 // function chainToSwitch(val) {
 //     var answer = "";
-//     // Only change code below this line
+//     //
 //     switch (val) {
 //         case "bob":
 //             answer = "Marley";
@@ -207,7 +207,7 @@
 //     }
 
 
-//     // Only change code above this line
+//     // above this line
 //     console.log(answer);
 // }
 
@@ -231,7 +231,7 @@
 // function phoneticLookup(val) {
 //     var result = "";
 
-//     // Only change code below this line
+//     //
 //     var myObject = {
 //         "alpha": "Adams",
 //         "bravo": "Boston",
@@ -241,7 +241,7 @@
 //         "foxtrot": "Frank"
 //     };
 //     result = myObject[val];
-//     // Only change code above this line
+//     // above this line
 //     return result;
 // }
 
@@ -260,7 +260,7 @@
 
 // function multiplyAll(arr) {
 //     var product = 1;
-//     // Only change code below this lin
+//     // below this lin
 //     for (var i = 0; i < arr.length; i++) {
 //         for (var j = 0; j < arr[i].length; j++) {
 //             product *= arr[i][j];
@@ -269,7 +269,7 @@
 //         }
 //     }
 
-//     // Only change code above this line
+//     // above this line
 //     console.log(product, 'product of the given array');
 // }
 
@@ -305,7 +305,7 @@
 //         "likes": ["JavaScript", "Gaming", "Foxes"]
 //     }
 // ];
-// // Only change code below this line
+//
 // function lookUpProfile(name, prop) {
 //     for (let x = 0; x < contacts.length; x++) {
 //         if (contacts[x].firstName === name) {
@@ -319,7 +319,7 @@
 //     console.log("No such contact")
 // }
 
-// // Only change code above this line
+// // above this line
 
 
 // lookUpProfile("Akira", "likes");

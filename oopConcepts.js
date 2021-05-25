@@ -1,8 +1,8 @@
-// //initializing object
-// let dog = {
-//     name: "",
-//     numLegs: ""
-// };
+//initializing object
+let dog = {
+    name: "beagles",
+    numLegs: "4"
+};
 
 // //accessing propertiesof an object
 // let duck = {
@@ -55,7 +55,7 @@
 
 // let canary = new Bird("Tweety");
 // let ownProps = [];
-// // Only change code below this line
+//
 // for (let property in canary) {
 //     if (canary.hasOwnProperty(property)) {
 //         ownProps.push(property)
@@ -76,7 +76,7 @@
 // let ownProps = [];
 // let prototypeProps = [];
 
-// // Only change code below this line
+//
 // for (let property in beagle) {
 //     if (beagle.hasOwnProperty(property)) {
 //         ownProps.push(property);
@@ -94,7 +94,7 @@
 // }
 
 // Dog.prototype = {
-//     // Only change code below this line
+//     //
 //     numLegs: 4,
 //     eat: () => {
 //         console.log("nom nom nom");
@@ -131,13 +131,10 @@
 // Penguin.prototype = Object.create(Bird.prototype);
 // Penguin.prototype.constructor = Penguin;
 
-// // Only change code below this line
 // Penguin.prototype.fly = function() {
 //     return "Alas, this is a flightless bird."
 // }
 
-
-// // Only change code above this line
 
 // let penguin = new Penguin();
 // console.log(penguin.fly());
@@ -152,8 +149,6 @@
 //     name: "Warrior",
 //     type: "race-boat"
 // };
-
-// // Only change code below this line
 
 // let glideMixin = (object) => {
 //     object.glide = () => {
@@ -180,17 +175,6 @@ let singMixin = function(obj) {
     console.log("Singing to an awesome tune");
   };
 }; */
-let isCuteMixin = function(obj) {
-    obj.isCute = function() {
-        return true;
-    };
-};
-let singMixin = function(obj) {
-    obj.sing = function() {
-        console.log("Singing to an awesome tune");
-    };
-};
-
 let funModule = (
     function() {
         return {
@@ -206,4 +190,6 @@ let funModule = (
             }
         }
     }
-)()
+)();
+funModule.singMixin(dog)
+dog.sing()

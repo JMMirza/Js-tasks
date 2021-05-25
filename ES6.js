@@ -17,14 +17,14 @@
 // //use UPPERCASE for their names
 // function printManyTimes(str) {
 
-//     // Only change code below this line
+//     //
 
 //     const SENTENCE = str + " is cool!";
 //     for (let i = 0; i < str.length; i += 2) {
 //         console.log(SENTENCE);
 //     }
 
-//     // Only change code above this line
+//     // above this line
 
 // }
 // printManyTimes("freeCodeCamp");
@@ -33,7 +33,7 @@
 // const s = [5, 7, 2];
 
 // function editInPlace() {
-//     // Only change code below this line
+//     //
 //     console.log('making const mutable');
 //     s[0] = 2;
 //     s[1] = 5;
@@ -43,7 +43,7 @@
 
 //     // Using s = [2, 5, 7] would be invalid
 
-//     // Only change code above this line
+//     // above this line
 // }
 // editInPlace();
 
@@ -115,11 +115,11 @@
 // const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // function removeFirstTwo(list) {
-//     // Only change code below this line
+//     //
 //     const [a, b, ...arr] = list; // Change this line
 
 //     console.log(a, b, arr)
-//         // Only change code above this line
+//         // above this line
 //     return arr;
 // }
 // const arr = removeFirstTwo(source);

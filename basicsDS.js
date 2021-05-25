@@ -1,19 +1,19 @@
 // // //Access an Array's Contents Using Bracket Notation
 
 // let myArray = ["a", "b", "c", "d"];
-// // Only change code below this line
+//
 // myArray[9] = "jm";
-// // Only change code above this line
+// // above this line
 // console.log(myArray);
 
 
 // //Add Items to an Array with push() and unshift()
 // function mixedNumbers(arr) {
-//     // Only change code below this line
+//     //
 //     arr.push(7, 'VIII', 9)
 //     arr.unshift('I', 2, 'three')
 
-//     // Only change code above this line
+//     // above this line
 //     return arr;
 // }
 
@@ -30,34 +30,34 @@
 // console.log(popShift(['challenge', 'is', 'not', 'complete']));
 
 
-// //use slice to remove and inset data at the same time and same place
-// function htmlColorNames(arr) {
-//     // Only change code below this line
-//     arr.splice(0, 2, 'DarkSalmon', 'BlanchedAlmond');
-//     // Only change code above this line
-//     return arr;
-// }
+// //use splice to remove and inset data at the same time and same place
+function htmlColorNames(arr) {
+    //
+    arr.splice(0, 2);
+    // above this line
+    return arr;
+}
 
-// console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
+console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
 
 // //copying array items using slice()
-// function forecast(arr) {
-//     // Only change code below this line
-//     let newArray = arr.slice(2, 4)
+function forecast(arr) {
+    //
+    let newArray = arr.slice(2, 4)
 
-//     return newArray;
-// }
+    return newArray;
+}
 
-// // Only change code above this line
-// console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+// above this line
+console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
 
 // //copy an arraywith spread operator
 // function copyMachine(arr, num) {
 //     let newArr = [];
 //     while (num >= 1) {
-//         // Only change code below this line
+//         //
 //         newArr[num - 1] = [...arr]
-//             // Only change code above this line
+//             // above this line
 //         num--;
 //     }
 //     return newArr;
@@ -67,7 +67,7 @@
 
 // //Check For The Presence and index of an Element With indexOf()
 // function quickCheck(arr, elem) {
-//     // Only change code below this line
+//     //
 //     //console.log(arr.indexOf('shallots'))
 //     if (arr.indexOf(elem) >= 0) {
 //         return true
@@ -75,7 +75,7 @@
 //         return false
 //     }
 
-//     // Only change code above this line
+//     // above this line
 // }
 
 // console.log(quickCheck(['squash', 'onions', 'shallots'], 'vegetables'));
@@ -143,11 +143,11 @@
 // };
 
 // function checkInventory(scannedItem) {
-//     // Only change code below this line
+//     //
 //     let inventory = foods[scannedItem];
 //     return inventory
 
-//     // Only change code above this line
+//     // above this line
 // }
 
 // console.log(checkInventory("apples"));
@@ -163,11 +163,11 @@
 //     strawberries: 27
 // };
 
-// // Only change code below this line
+//
 // delete foods.oranges
 // delete foods.plums
 // delete foods.strawberries
-//     // Only change code above this line
+//     // above this line
 
 // console.log(foods);
 
