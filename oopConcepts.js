@@ -35,13 +35,30 @@
 //     this.numLegs = 2;
 // }
 
-//Constructor to Create Objects
+// //Constructor to Create Objects
 
-function Bird() {
-    this.name = "Albert";
-    this.color = "blue";
+// function Bird() {
+//     this.name = "Albert";
+//     this.color = "blue";
+//     this.numLegs = 2;
+// }
+
+// let blueBird = new Bird();
+// console.log(blueBird('jm', 'whitre', 0))
+
+
+//Understand Own Properties
+function Bird(name) {
+    this.name = name;
     this.numLegs = 2;
 }
 
-let blueBird = new Bird();
-console.log(blueBird('jm', 'whitre', 0))
+let canary = new Bird("Tweety");
+let ownProps = [];
+// Only change code below this line
+for (let property in canary) {
+    if (canary.hasOwnProperty(property)) {
+        ownProps.push(property)
+    }
+}
+console.log(ownProps)
