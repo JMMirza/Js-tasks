@@ -1,27 +1,28 @@
 // // const { countdown, lookUpProfile } = require('./basicsOfJS');
-// array = [{ id: 1, name: "ali", friends: ['jibran', 'usman', 'ali'] }, { id: 2, name: "kamal", friends: ['jamshed', 'jibran', 'usman'] }];
+array = [
+    { id: 1, name: "ali", friends: ['jibran', 'usman', 'ali', 'jm'] },
+    { id: 2, name: "kamal", friends: ['jamshed', 'jibran', 'usman', 'ali'] }
+];
 
-// function commonFriends(arr) {
-//     let final = []
-//     let user = arr
-//         .map(user => user['friends'])
-//     let array = user.filter(usedr => {
-//         if (user.includes(usedr, 0)) {
-//             final.push(usedr)
-//         }
-//     })
-//     console.log(final);
-// }
+function commonFriends(arr) {
+    let final = []
+    let user = arr
+        .map(user => user['friends'])
+    for (let i = 0; i < user.length - 1; i++) {
+        for (let j = 0; j < user[i].length - 1; j++) {
 
-// function allFriends(arr) {
-//     let array = arr.map(item => item.friends)
-//     console.log("List of all friends", array)
-
-// }
-// allFriends(array)
-// commonFriends(array)
-let user = {
-    id: 1
+            if (user[i][j] === user[i + 1][j + 1]) {
+                final.push(user[i][j])
+            }
+        }
+    }
+    console.log('common friends are: ', final);
 }
-user['name2'] = "jm"
-console.log(user)
+
+function allFriends(arr) {
+    let array = arr.map(item => item.friends)
+    console.log("List of all friends", array)
+
+}
+allFriends(array)
+commonFriends(array)
