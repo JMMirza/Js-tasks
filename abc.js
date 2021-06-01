@@ -1,26 +1,25 @@
 // // const { countdown, lookUpProfile } = require('./basicsOfJS');
 array = [
-    { id: 1, name: "ali", friends: ['jibran', 'usman', 'ali', 'jm'] },
-    { id: 2, name: "kamal", friends: ['jamshed', 'jibran', 'usman', 'ali'] }
+    { id: 1, name: "ali", friends: ['jibran', 'usman', 'ali', 'jm', 'avx', 'qwerty', 'aswd', 'jamshed'] },
+    { id: 2, name: "kamal", friends: ['jamshed', 'jibran', 'usman', 'jm', 'ali', 'aswd', 'xyz', 'qazxcvbnm'] }
 ];
 
 function commonFriends(arr) {
-    let final = []
-    let user = arr
-        .map(user => user['friends'])
-    for (let i = 0; i < user.length - 1; i++) {
-        for (let j = 0; j < user[i].length - 1; j++) {
+    let dummy = []
+    let user = arr.map(item => item.friends).reduce((acc, val) => acc.concat(val), []);
+    for (let i = 0; i <= user.length - 1; i++) {
+        for (let j = 1; j < user.length; j++) {
 
-            if (user[i][j] === user[i + 1][j + 1]) {
-                final.push(user[i][j])
+            if (user[i] === user[j + i]) {
+                dummy.push(user[i])
             }
         }
     }
-    console.log('common friends are: ', final);
+    console.log('common friends are: ', dummy);
 }
 
 function allFriends(arr) {
-    let array = arr.map(item => item.friends)
+    let array = arr.map(item => item.friends).reduce((acc, val) => acc.concat(val), []);
     console.log("List of all friends", array)
 
 }
