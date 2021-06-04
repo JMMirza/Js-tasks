@@ -1,5 +1,4 @@
 function rot13(str) {
-    //Deciphered reference letters
     let decoded = {
         A: 'N',
         B: 'O',
@@ -32,18 +31,12 @@ function rot13(str) {
         '?': '?',
         '.': '.'
     }
-
-    //convert the string to lowercase
     str = str.toUpperCase();
 
-    //decipher the code
-    let decipher = '';
+    let final = '';
     for (let i = 0; i < str.length; i++) {
-        decipher += decoded[str[i]];
+        final += decoded[str[i]];
     }
-
-    //return the output
-    return decipher;
+    return final;
 }
-// Change the inputs below to test
-console.log(rot13("SERR CVMMN!")); //should decode to "FREE CODE CAMP"
+console.log(rot13("WNA ZHUNZZNQ ZVEMN"));

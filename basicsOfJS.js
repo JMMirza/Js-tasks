@@ -316,7 +316,7 @@ function lookUpProfile(name, prop) {
             }
         }
     }
-    console.log("No such contact")
+    // console.log("No such contact")
 }
 
 // // above this line
@@ -337,7 +337,7 @@ function lookUpProfile(name, prop) {
 
 
 //Recursion (function to print count down)
-function countdown(n) {
+export default function countdown(n) {
     if (n < 1) {
         //console.log("in if")
         return [];
@@ -348,5 +348,5 @@ function countdown(n) {
         return countArray;
     }
 }
-module.exports = { countdown, lookUpProfile }
-    // console.log(countdown(5))
+// module.exports = { countdown, lookUpProfile }
+// console.log(countdown(5))

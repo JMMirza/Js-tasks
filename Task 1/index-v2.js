@@ -88,16 +88,46 @@ function addUser(record) {
 function newRecord(userName, userAge, userGender, record) {
     //converting gender value to lower case
     userGender.toLowerCase();
+    let regex = /^[a-zA-Z\s]+$/;
     //vaidating the data
-    if (userName !== '' && userName !== undefined && userAge > 0 && userAge !== undefined && userGender !== '' && userGender !== undefined && userGender[0] == 'male' || userGender == 'female' || userGender[0] == 'm' || userGender == 'f') {
-        //creating the user object
-        let newUser = new User(userName, userAge, userGender);
-        //printing values 
-        console.log('New user information is: ', newUser, '\nTotal User: ', ++totalUser);
-        //adding it into the array
-        userRecord.push(newUser);
-        //calling back function again to crate a loop of adding user 
-        back(record)
+    if (userName !== '' && userAge !== '' && userGender !== '') {
+        if (regex.test(userName) === true) {
+            if (userAge > 0 && userAge < 100) {
+                if (userGender == 'male' || userGender == 'female' || userGender[0] == 'm' || userGender[0] == 'f') {
+                    //creating the user object
+                    let newUser = new User(userName, userAge, userGender);
+                    //printing values 
+                    console.log('New user information is: ', newUser, '\nTotal User: ', ++totalUser);
+                    //adding it into the array
+                    userRecord.push(newUser);
+                    //calling back function again to crate a loop of adding user 
+                    back(record)
+
+                } else {
+                    //if the entered values are not correct
+                    console.log("Please enter correct gender")
+                        //we have decremented this in adduser so if user's value is not added so the place in array will be empty
+                    record++
+                    //calling again addUser function so that user can create user again
+                    addUser(record)
+                }
+            } else {
+                //if the entered values are not correct
+                console.log("Please enter correct age")
+                    //we have decremented this in adduser so if user's value is not added so the place in array will be empty
+                record++
+                //calling again addUser function so that user can create user again
+                addUser(record)
+            }
+
+        } else {
+            //if the entered values are not correct
+            console.log("Please enter correct name")
+                //we have decremented this in adduser so if user's value is not added so the place in array will be empty
+            record++
+            //calling again addUser function so that user can create user again
+            addUser(record)
+        }
     } else {
         //if the entered values are not correct
         console.log("Please enter correct data")
