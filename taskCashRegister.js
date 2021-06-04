@@ -19,7 +19,7 @@ function checkCashRegister(price, cash, cid) {
     totalAmount = totalAmount.toFixed(2)
     if (changeAmount > totalAmount) {
         return { status: "INSUFFICIENT_FUNDS", change: [] }
-    } else if (changeAmount === totalAmount) {
+    } else if (changeAmount.toFixed(2) === totalAmount) {
         return { status: "CLOSED", change: cid }
     } else {
         cid = cid.reverse()
@@ -28,7 +28,6 @@ function checkCashRegister(price, cash, cid) {
             let temp = [cid[i][0], 0];
             while (changeAmount >= UNIT_AMOUNT[cid[i][0]] && cid[i][1] > 0) {
                 temp[1] += UNIT_AMOUNT[cid[i][0]];
-
                 cid[i][1] -= UNIT_AMOUNT[cid[i][0]];
                 changeAmount -= UNIT_AMOUNT[cid[i][0]];
                 changeAmount = changeAmount.toFixed(2)
@@ -36,9 +35,14 @@ function checkCashRegister(price, cash, cid) {
             if (temp[1] > 0) {
                 changeArray.push(temp);
             }
+
         }
-        return { status: "OPEN", change: changeArray }
+
     }
+    if (changeAmount > 0) {
+        return { status: "INSUFFICIENT_FUNDS", change: [] };
+    }
+    return { status: "OPEN", change: changeArray };
 }
 console.log(checkCashRegister(19.5, 20, [
     ["PENNY", 1.01],
